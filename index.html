@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mass Shootings in the U.S.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- NBC CSS -->
+    <link href="css/nbcotsbase.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,300,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Responsive iFrame stuff -->
+    <!--
+    <script src="http://data.nbcstations.com/js/crosstalk.js"></script>
+    <script type="text/javascript">
+         document.addEventListener("DOMContentLoaded", function() {
+            xtalk.responsive = false;
+            xtalk.init();
+         });
+    </script>
+    -->
+
+  </head>
+
+  <body>
+    <style>
+    #container{
+        width:960px;
+        height:600px;
+        position:relative;
+    }
+    #graphic{
+        width:100%;
+        height:100%;
+    }
+    .spbutton{
+        
+        font-family:'Roboto',sans-serif;
+        padding:5px;
+        cursor:pointer;
+    }
+    .selected{
+        color:#fff;
+        background-color:#3E7FA5;
+    }
+    .start{
+        border-bottom-right-radius:5px;
+        border-top-right-radius:5px;
+    }
+    .stop{
+        border-bottom-left-radius:5px;
+        border-top-left-radius:5px;
+    }
+    .nonselected{
+        color:#000;
+        background-color:#d3d3d3;
+    }
+    #legend{
+        background-color:rgba(255,255,255,0.5);
+        font-family: 'Arimo', sans-serif;
+        font-size:12px;
+        font-weight:700;
+        border-radius:5px;
+        border-color:#d3d3d3;
+    }
+    #tooltip{
+        position:absolute;
+        background-color:#fff;
+        border-radius:5px;
+        border-style:solid;
+        border-color:#d3d3d3;
+        border-width:1px;
+        font-family: 'Arimo', sans-serif;
+        font-size:12px;
+        width:250px;
+        padding:10px;
+        display:none;
+        z-index:1;
+    }
+    #timer{
+        font-family:'Roboto',sans-serif;
+        font-weight:700;
+        font-size:30px;
+    }
+    .credits{
+        
+    }
+    @media (max-width:960px){
+        #container{
+            width:100%;
+            height:300px;
+        }
+        #legend{
+            
+        }
+        .credits{
+            
+        }
+    }
+    </style>
+
+    <!-- Start content here -->
+    <div class="headline">Notable Mass Shootings in the U.S.</div>
+    <span class="spbutton stop">View All Shootings</span><span class="spbutton start">Play Animation</span>
+    <div id="container">
+        <svg id="graphic">
+        </svg>
+    </div>
+    <div id="legend"></div>
+    <div class="credits">Credit: Sam Hart, Will Mathis/NBC, Data: Stanford Mass Shootings of America (MSA)<br>
+    Data includes only shootings that occurred in a public place and resulted in three or more deaths, as collected by the MSA project. 
+    </div>
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script>
+    <script src="js/topojson/topojson.min.js"></script>
+
+
+    <script type="text/javascript" src="js/miso.ds.deps.min.0.4.1.js"></script>
+    <script src="js/starter.js"></script>
+
+
+  </body>
+</html>
